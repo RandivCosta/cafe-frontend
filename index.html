@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Shop</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <!-- font awesome icons link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#"><img src="" alt="Cafe Logo" /></a>
+            </div>
+
+            <nav>
+
+                <ul id="nav-menu-container">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Games</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Forums</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+            </nav>
+
+            <a href="#" id="form-open">Login / Register</a>
+
+            <!-- menu toggle button -->
+            <div id="nav-toggle" class="menu-btn">
+                <i class="fa-solid fa-bars" id="menu-icon"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- main content of the site -->
+
+        <div class="home" id="home">
+
+            <!-- login and signUp section -->
+            <div class="form_container">
+                <i class="fa-solid fa-xmark form_close"></i>
+
+                <!-- login form -->
+                <div class="form login_form">
+                    <form action="#">
+                        <h2>Login</h2>
+                        <div class="input_box">
+                            <input type="email" placeholder="Enter your email" required />
+                            <i class="fa-regular fa-envelope email"></i>
+                        </div>
+                        <div class="input_box">
+                            <input type="password" placeholder="Enter your password" required />
+                            <i class="fa-solid fa-lock password"></i>
+                            <i class="fa-regular fa-eye-slash pw_hide"></i>
+                        </div>
+                        <div class="option_field">
+                            <span class="checkbox">
+                                <input type="checkbox" id="check" />
+                                <label for="check">Remember me</label>
+                            </span>
+                            <a href="#" class="forgot_pw">Forgot password?</a>
+                        </div>
+                        <button class="button">Login Now</button>
+                        <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
+                    </form>
+                </div>
+
+                <!-- Sign up form -->
+                <div class="form signup_form">
+                    <form action="#">
+                        <h2>Signup</h2>
+                        <div class="input_box">
+                            <input type="email" placeholder="Enter your email" required />
+                            <i class="fa-regular fa-envelope email"></i>
+                        </div>
+                        <div class="input_box">
+                            <input type="password" placeholder="Create password" required />
+                            <i class="fa-solid fa-lock password"></i>
+                            <i class="fa-regular fa-eye-slash pw_hide"></i>
+                        </div>
+                        <div class="input_box">
+                            <input type="password" placeholder="Confirm password" required />
+                            <i class="fa-solid fa-lock password"></i>
+                            <i class="fa-regular fa-eye-slash pw_hide"></i>
+                        </div>
+                        <button class="button">Signup Now</button>
+                        <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Home content/landing page -->
+            <section class="hero-section" id="hero-section">
+                <div class="home-text">
+                    <h1>Meet, <span>Eat &</span> <br>Enjoy The True <br> taste</h1>
+                    <a href="#" class="explore-btn">Explore Menu <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#" class="order-btn">Order Now</a>
+                </div>
+
+                <div class="home-img">
+                    <img src="assets/hero.png" alt="home image">
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <script>
+        // header menu toggle
+        document.getElementById('nav-toggle').addEventListener('click', function () {
+            let navMenu = document.getElementById('nav-menu-container');
+            navMenu.style.display = navMenu.offsetParent === null ? 'block' : 'none';
+            navMenu.classList.toggle('open');
+            const isOpen = navMenu.classList.contains('open');
+            let menuIcon = document.getElementById('menu-icon');
+            menuIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars';
+        });
+    </script>
+
+    <!-- main logic -->
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
