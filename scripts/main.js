@@ -1,32 +1,29 @@
-console.log("hello world");
+//copy menu for mobile menu
+function copyMenu() {
+  // copy inside header nav to mobile nav
+  const mainNav = document.querySelector(".header-nav nav");
+  const navPlace = document.querySelector(".off-canvas nav");
+  navPlace.innerHTML = mainNav.innerHTML;
 
-// login and signup form logic
-const formOpenBtn = document.querySelector("#form-open"),
-  home = document.querySelector(".home"),
-  formContainer = document.querySelector(".form_container"),
-  formCloseBtn = document.querySelector(".form_close"),
-  signupBtn = document.querySelector("#signup"),
-  loginBtn = document.querySelector("#login"),
-  pwShowHide = document.querySelectorAll(".pw_hide");
-formOpenBtn.addEventListener("click", () => home.classList.add("show"));
-formCloseBtn.addEventListener("click", () => home.classList.remove("show"));
-pwShowHide.forEach((icon) => {
-  icon.addEventListener("click", () => {
-    let getPwInput = icon.parentElement.querySelector("input");
-    if (getPwInput.type === "password") {
-      getPwInput.type = "text";
-      icon.classList.replace("fa-eye-slash", "fa-eye");
-    } else {
-      getPwInput.type = "password";
-      icon.classList.replace("fa-eye", "fa-eye-slash");
-    }
-  });
+  //copy .header-top .wrapper to .thetop-nav
+  const topNav = document.querySelector(".header-top .wrapper");
+  const topPlace = document.querySelector(".off-canvas .thetop-nav");
+  topPlace.innerHTML = topNav.innerHTML;
+}
+
+copyMenu();
+
+// show mobile menu on mobile devices
+const menuButton = document.querySelector(".trigger");
+const closeButton = document.querySelector(".t-close");
+const addclass = document.querySelector(".site");
+
+menuButton.addEventListener("click", function () {
+  addclass.classList.toggle("showmenu");
 });
-signupBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  formContainer.classList.add("active");
+
+closeButton.addEventListener("click", function () {
+  addclass.classList.remove("showmenu");
 });
-loginBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  formContainer.classList.remove("active");
-});
+
+
