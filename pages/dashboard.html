@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery Cafe</title>
+    <title>Cafe App</title>
     <!-- css link -->
-    <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <link rel="stylesheet" href="app/styles/style.css" type="text/css">
     <!-- font awesome icons link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -51,16 +51,16 @@
                             <ul class="flexitem main-links">
                                 <li><a href="#">Blog</a></li>
                                 <li><a href="#">Featured Products</a></li>
-                                <li><a href="/pages/addProduct.html">Add Product</a></li>
+                                <li><a href="/addProduct" data-link>Add Product</a></li>
                             </ul>
                         </div>
 
                         <!-- right side  -->
                         <div class="right">
                             <ul class="flexitem main-links">
-                                <li><a href="/pages/Auth.html">Sign Up</a></li>
+                                <li><a href="#">Sign Up</a></li>
                                 <li><a href="#">My Account</a></li>
-                                <li><a href="/pages/dashboard.html">Dashboard</a></li>
+                                <li><a href="/dashboard" data-link>Dashboard</a></li>
                                 <li>
                                     <a href="#">USD <span class="icon-small"><i
                                                 class="fa-solid fa-angle-down"></i></span></a>
@@ -98,11 +98,11 @@
                             <div class="logo"><a href="/"><span class="circle"></span>.Shop</a></div>
                             <nav class="mobile-hide">
                                 <ul class="flexitem second-links">
-                                    <li><a href="/">Home</a></li>
-                                    <li><a href="/pages/products.html">Menu</a></li>
-                                    <li><a href="/pages/reservations.html">Reservations <div class="icon-small"><i class="fa-solid fa-angle-down"></i></div></a></li>
-                                    <li><a href="/pages/about.html">About</a></li>
-                                    <li><a href="#">Offers <div class="fly-item"><span>New!</span></div></a></li>
+                                    <li><a href="/" data-link>Home</a></li>
+                                    <li><a href="#" data-link>Posts</a></li>
+                                    <li><a href="#">Women <div class="icon-small"><i class="fa-solid fa-angle-down"></i></div></a></li>
+                                    <li><a href="#">Men</a></li>
+                                    <li><a href="#">Sports <div class="fly-item"><span>New!</span></div></a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -131,9 +131,7 @@
 
         <!-- main content -->
         <main>
-            <div id="app" class="container">
-                <!-- site home content  -->
-            </div>
+            <div id="app" class="container"></div>
         </main>
 
         <!-- footer  -->
@@ -141,7 +139,9 @@
     </div>
 
     <!-- main logic -->
-    <script src="scripts/main.js"></script>
+    <script src="app/scripts/main.js"></script>
+    <!-- router logic  -->
+     <script type="module" src="app/scripts/router.js"></script>
 
 </body>
 
