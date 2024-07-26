@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="form.css">
+
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>Responsive Regisration Form </title>
+</head>
+
+<body>
+    <div class="add-product-page">
+        <div class="form-container">
+            <div class="add-product-header">Add Product</div>
+            <form action="#">
+                <div class="form first">
+                    <div class="details personal">
+                        <span class="title">Product Details</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Product Name</label>
+                                <input type="text" placeholder="Enter product name" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Category</label>
+                                <select required>
+                                    <option disabled selected>Select category</option>
+                                    <option>Coffee</option>
+                                    <option>Pizza</option>
+                                    <option>Cake</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label>Size</label>
+                                <select required>
+                                    <option disabled selected>Select size</option>
+                                    <option>Regular</option>
+                                    <option>Medium</option>
+                                    <option>Large</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="input-field description">
+                                <label>Product description</label>
+                                <input type="text" placeholder="Enter product description" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Price</label>
+                                <input type="text" placeholder="Enter price" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Status</label>
+                                <select required>
+                                    <option disabled selected>Select status</option>
+                                    <option>Spacial offer</option>
+                                    <option>Normal</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label>Ingredients</label>
+                                <input type="text" placeholder="Enter ingredients">
+                            </div>
+                            <div class="input-field">
+                                <label>Spacial Notes</label>
+                                <input type="text" placeholder="Enter a note">
+                            </div>
+                        </div>
+                        <span class="title">Upload a product picture:</span>
+                        <div class="product-pic">
+                            <input type="file" id="picture" name="picture" accept="image/png, image/jpeg" required />
+                        </div>
+                    </div>
+                    <div class="add-product-btns">
+                        <div class="backBtn">
+                            <i class="uil uil-navigator"></i>
+                            <span class="btnText">Back</span>
+                        </div>
+    
+                        <button class="sumbit" type="submit">
+                            <span class="btnText">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="form.js"></script>
+</body>
+
+</html>
